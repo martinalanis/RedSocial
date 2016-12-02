@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  h3.center-align.title-1.pt50= title
+  .row
+    .col.s3.offset-s1.border-soft.mt-90.p20
+      h5.center-align
+        p.nomargin BIENVENIDO A LA
+      h2.center-align.nomargin
+        p.nomargin 
+          b RED SOCIAL
+      h5.center-align
+        p.nomargin MAS GRANDE DEL MUNDO
+    .col.s6.offset-s1
+      form(action="/register" method="post").card.z-depth-3.nomargin
+        h5.center-align.p20.lspacing REGISTRO
+        .row.plr20
+          .input-field.col.s4
+            input(type="text" name="name")#name.validate
+            label(for="name") Nombre
+          .input-field.col.s4
+            input(type="text" name="paterno")#paterno.validate
+            label(for="paterno") Apellido Paterno
+          .input-field.col.s4
+            input(type="text" name="materno")#materno.validate
+            label(for="materno") Apellido Materno
+        .row.plr20
+          .input-field.col.s6
+            input(type="password" name="pw")#pw.vaidate
+            label(for="pw") Contraseña
+          .input-field.col.s6
+            input(type="password" name="pw_confirm")#pw_confirm.vaidate
+            label(for="pw_confirm") Confirme la contraseña
+        .row.plr20.pb40
+          .input-field.col.s12
+            input(type="email" name="email")#email.validate
+            label(for="email") Email
+        .row
+          button(type="submit").btn-large.waves-effect.waves-light.col.l12.lspacing.blue.darken-1 ¡GET ME IN!

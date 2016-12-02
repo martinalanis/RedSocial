@@ -1,0 +1,78 @@
+body {
+  /*padding: 50px;*/
+  /*font-family: "Lucida Grande", Helvetica, Arial, sans-serif;*/
+  background: #f9fbe7;
+  color: #555;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.title-1 {
+	color: #47637F;
+	font-weight: bold;
+}
+.title-2 {
+	font-size: 1.2rem;
+}
+.small-text{
+	font-size: 0.9rem;
+}
+.p20 {
+	padding: 20px!important;
+}
+
+.pt20 {
+	padding-top: 20px;
+}
+
+.pt50 {
+	padding-top: 50px;
+}
+
+.pb40 {
+	padding-bottom: 40px;
+}
+
+.plr20 {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.nomargin {
+	margin: 0;
+}
+.mtb-15 {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.mt-30{
+	margin-top: 30px;
+}
+.mt-90{
+	margin-top: 90px;
+}
+
+.lspacing {
+	letter-spacing: 6px;
+	font-size: 18px;
+}
+.border-soft {
+	border: 1px solid #aaa;
+	border-radius: 5px;
+}
+.brand-logo{
+	margin-left: 30px;
+	font-weight: bold;
+}
+.input-field input[type=search]:focus {
+	background-color: #eee;
+}
+.input-field input[type=search]:focus + label i,
+.input-field input[type=search]:focus ~ .material-icons {
+	color: #009688;
+}
+.fixed-action-btn ul a.btn-floating {
+	margin-top: 10px;
+}

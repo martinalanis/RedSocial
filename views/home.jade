@@ -1,0 +1,70 @@
+extends layout
+
+block content
+  include nav
+  
+  .row
+    .col.s3.mt-15
+      include profile
+    .col.s8.mt-15
+      .card-panel.z-depth-1.p20.white
+        form
+          .row
+            div.input-field.col.s11
+              i.material-icons.prefix create
+              input#post(type="text" required)
+              label(for="post") ¿Que piensas?
+            div.input-field.col.s1
+              button(type="submit").btn-floating.btn-large.waves-effect.waves-light.green ¡GO!
+
+
+      .card-panel.z-depth-1.p20.white
+        .row.valign-wrapper
+          .col.s1
+            img(src="images/user.jpg").circle.responsive-img
+          .col.s11
+            p.title-2.nomargin
+              b Macake
+            p.small-text.nomargin Posted on
+        .divider
+        .row
+          p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum repellat fugit, fugiat nesciunt culpa cumque minus aliquam dolores quam dolorem provident pariatur, eligendi consectetur eos accusamus quibusdam maiores ratione quis!
+      .card-panel.z-depth-1.p20.white
+        .row.valign-wrapper
+          .col.s1
+            img(src="images/user.jpg").circle.responsive-img
+          .col.s11
+            p.title-2.nomargin
+              b Jimmy
+            p.small-text.nomargin Posted on
+        .divider
+        .row
+          p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum repellat fugit, fugiat nesciunt culpa cumque minus aliquam dolores quam dolorem provident pariatur, eligendi consectetur eos accusamus quibusdam maiores ratione quis!
+
+  .fixed-action-btn.vertical.click-to-toggle
+    a.btn-floating.btn-large.red#floating_menu
+      i.material-icons menu
+    ul
+      li
+        a.btn-floating.blue
+          i.material-icons#reply_icon reply
+        a.btn-floating.brown#search_icon
+          i.material-icons search
+        a.btn-floating.green
+          i.material-icons#create_icon create
+block scripts
+  script.
+    $(document).ready(function(){
+      
+      $("#search_icon").click(function(){
+        $("#search").focus();
+        $("#floating_menu").click();
+      });
+
+      $("#create_icon").click(function(){
+        $("#post").focus();
+        $("#floating_menu").click();
+      });
+
+    });
+

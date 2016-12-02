@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h3.center-align.title-1.pt50= title
+  .row
+    .col.l4.offset-l4
+      form(action="/home" method="post").card.z-depth-3.nomargin
+        h5.center-align.p20.lspacing WELCOME
+        .row.plr20
+          .input-field.col.l12
+            input(type="text" name="email")#email.validate
+            label(for="email") Email
+        .row.plr20.pb40
+          .input-field.col.l12
+            input(type="password" name="pw")#pw.vaidate
+            label(for="pw") Password
+        .row
+          button(type="submit").btn-large.waves-effect.waves-light.col.l12.lspacing.blue.darken-1 LOGIN
+
