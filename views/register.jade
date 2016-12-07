@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  h3.center-align.title-1.pt50= title
+  h3.center-align.title-1.pt50 RED SOCIAL
   .row
     .col.s3.offset-s1.border-soft.mt-90.p20
       h5.center-align
@@ -31,9 +31,12 @@ block content
           .input-field.col.s6
             input(type="password" name="pw_confirm")#pw_confirm.vaidate
             label(for="pw_confirm") Confirme la contraseña
-        .row.plr20.pb40
+        .row.plr20.pb20
           .input-field.col.s12
             input(type="email" name="email")#email.validate
             label(for="email") Email
+        if error
+          .row.plr20
+            p#error.p20.red.white-text= error
         .row
           button(type="submit").btn-large.waves-effect.waves-light.col.l12.lspacing.blue.darken-1 ¡GET ME IN!

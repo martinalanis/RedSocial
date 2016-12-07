@@ -1,19 +1,23 @@
 extends layout
 
 block content
-  h3.center-align.title-1.pt50= title
+  h3.center-align.title-1.pt50 RED SOCIAL
   .row
-    .col.l4.offset-l4
-      form(action="/home" method="post").card.z-depth-3.nomargin
+    .col.s4.offset-s4
+      form(action="/login" method="POST").card.z-depth-3.nomargin
         h5.center-align.p20.lspacing WELCOME
         .row.plr20
           .input-field.col.l12
-            input(type="text" name="email")#email.validate
+            input(type="text" name="email" required)#email.validate
             label(for="email") Email
         .row.plr20.pb40
           .input-field.col.l12
-            input(type="password" name="pw")#pw.vaidate
+            input(type="password" name="pw" required)#pw.vaidate
             label(for="pw") Password
+        if msg
+          .row.plr20
+            p#error.p20.blue.lighten-1.white-text= msg
         .row
           button(type="submit").btn-large.waves-effect.waves-light.col.l12.lspacing.blue.darken-1 LOGIN
-
+      p.center-align.color-dark-blue ¿No tienes cuenta? 
+        a(href="registro").color-red Registrarse

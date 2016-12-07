@@ -30,6 +30,9 @@ a {
 .pt50 {
 	padding-top: 50px;
 }
+.pb20 {
+	padding-bottom: 20px;
+}
 
 .pb40 {
 	padding-bottom: 40px;
@@ -75,4 +78,12 @@ a {
 }
 .fixed-action-btn ul a.btn-floating {
 	margin-top: 10px;
+}
+
+/*Colors*/
+.color-dark-blue {
+	color: #01579b;
+}
+.color-red {
+	color: #c62828;
 }
